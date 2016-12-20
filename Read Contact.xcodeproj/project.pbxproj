@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FBE1A2F71E08C3CE0053A5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A2F61E08C3CE0053A5A9 /* AppDelegate.swift */; };
-		FBE1A2F91E08C3CE0053A5A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A2F81E08C3CE0053A5A9 /* ViewController.swift */; };
-		FBE1A2FC1E08C3CE0053A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A2FA1E08C3CE0053A5A9 /* Main.storyboard */; };
-		FBE1A2FE1E08C3CE0053A5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A2FD1E08C3CE0053A5A9 /* Assets.xcassets */; };
-		FBE1A3011E08C3CE0053A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A2FF1E08C3CE0053A5A9 /* LaunchScreen.storyboard */; };
+		FB7674C01E08D89700189F51 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7674BF1E08D89700189F51 /* ReadViewController.swift */; };
+		FBE1A3161E08C4DD0053A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A30F1E08C4DD0053A5A9 /* LaunchScreen.storyboard */; };
+		FBE1A3171E08C4DD0053A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A3101E08C4DD0053A5A9 /* Main.storyboard */; };
+		FBE1A3191E08C4DD0053A5A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A3131E08C4DD0053A5A9 /* AppDelegate.swift */; };
+		FBE1A31A1E08C4DD0053A5A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A3141E08C4DD0053A5A9 /* Assets.xcassets */; };
+		FBE1A31B1E08C4DD0053A5A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A3151E08C4DD0053A5A9 /* Info.plist */; };
+		FBE1A31D1E08C5190053A5A9 /* DataContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A31C1E08C5190053A5A9 /* DataContact.swift */; };
+		FBE1A31F1E08C5BA0053A5A9 /* MainContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A31E1E08C5BA0053A5A9 /* MainContactTableViewController.swift */; };
+		FBE1A3211E08C64F0053A5A9 /* ContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A3201E08C64F0053A5A9 /* ContactPresenter.swift */; };
+		FBE1A3231E08C67D0053A5A9 /* ContactPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A3221E08C67D0053A5A9 /* ContactPresenterInterface.swift */; };
+		FBE1A3251E08C91E0053A5A9 /* ReaderContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A3241E08C91E0053A5A9 /* ReaderContact.swift */; };
+		FBE1A3271E08C94C0053A5A9 /* ReaderContactInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1A3261E08C94C0053A5A9 /* ReaderContactInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB7674BF1E08D89700189F51 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		FBE1A2F31E08C3CE0053A5A9 /* Read Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Read Contact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBE1A2F61E08C3CE0053A5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FBE1A2F81E08C3CE0053A5A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FBE1A2FB1E08C3CE0053A5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FBE1A2FD1E08C3CE0053A5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FBE1A3001E08C3CE0053A5A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FBE1A3021E08C3CE0053A5A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE1A30F1E08C4DD0053A5A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FBE1A3101E08C4DD0053A5A9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FBE1A3131E08C4DD0053A5A9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FBE1A3141E08C4DD0053A5A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBE1A3151E08C4DD0053A5A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE1A31C1E08C5190053A5A9 /* DataContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContact.swift; sourceTree = "<group>"; };
+		FBE1A31E1E08C5BA0053A5A9 /* MainContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContactTableViewController.swift; sourceTree = "<group>"; };
+		FBE1A3201E08C64F0053A5A9 /* ContactPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPresenter.swift; sourceTree = "<group>"; };
+		FBE1A3221E08C67D0053A5A9 /* ContactPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPresenterInterface.swift; sourceTree = "<group>"; };
+		FBE1A3241E08C91E0053A5A9 /* ReaderContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderContact.swift; sourceTree = "<group>"; };
+		FBE1A3261E08C94C0053A5A9 /* ReaderContactInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderContactInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +67,84 @@
 		FBE1A2F51E08C3CE0053A5A9 /* Read Contact */ = {
 			isa = PBXGroup;
 			children = (
-				FBE1A2F61E08C3CE0053A5A9 /* AppDelegate.swift */,
-				FBE1A2F81E08C3CE0053A5A9 /* ViewController.swift */,
-				FBE1A2FA1E08C3CE0053A5A9 /* Main.storyboard */,
-				FBE1A2FD1E08C3CE0053A5A9 /* Assets.xcassets */,
-				FBE1A2FF1E08C3CE0053A5A9 /* LaunchScreen.storyboard */,
-				FBE1A3021E08C3CE0053A5A9 /* Info.plist */,
+				FBE1A3081E08C4DD0053A5A9 /* classes */,
+				FBE1A3121E08C4DD0053A5A9 /* resources */,
 			);
 			path = "Read Contact";
+			sourceTree = "<group>";
+		};
+		FBE1A3081E08C4DD0053A5A9 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A3091E08C4DD0053A5A9 /* data model */,
+				FBE1A30A1E08C4DD0053A5A9 /* module */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		FBE1A3091E08C4DD0053A5A9 /* data model */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A31C1E08C5190053A5A9 /* DataContact.swift */,
+			);
+			path = "data model";
+			sourceTree = "<group>";
+		};
+		FBE1A30A1E08C4DD0053A5A9 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A30B1E08C4DD0053A5A9 /* contact */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		FBE1A30B1E08C4DD0053A5A9 /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A30C1E08C4DD0053A5A9 /* model */,
+				FBE1A30D1E08C4DD0053A5A9 /* presenter */,
+				FBE1A30E1E08C4DD0053A5A9 /* view */,
+			);
+			path = contact;
+			sourceTree = "<group>";
+		};
+		FBE1A30C1E08C4DD0053A5A9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A3241E08C91E0053A5A9 /* ReaderContact.swift */,
+				FBE1A3261E08C94C0053A5A9 /* ReaderContactInterface.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FBE1A30D1E08C4DD0053A5A9 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A3201E08C64F0053A5A9 /* ContactPresenter.swift */,
+				FBE1A3221E08C67D0053A5A9 /* ContactPresenterInterface.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		FBE1A30E1E08C4DD0053A5A9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A30F1E08C4DD0053A5A9 /* LaunchScreen.storyboard */,
+				FBE1A3101E08C4DD0053A5A9 /* Main.storyboard */,
+				FBE1A31E1E08C5BA0053A5A9 /* MainContactTableViewController.swift */,
+				FB7674BF1E08D89700189F51 /* ReadViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FBE1A3121E08C4DD0053A5A9 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBE1A3131E08C4DD0053A5A9 /* AppDelegate.swift */,
+				FBE1A3141E08C4DD0053A5A9 /* Assets.xcassets */,
+				FBE1A3151E08C4DD0053A5A9 /* Info.plist */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +179,7 @@
 				TargetAttributes = {
 					FBE1A2F21E08C3CE0053A5A9 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = PG98TTFS9P;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,9 +207,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE1A3011E08C3CE0053A5A9 /* LaunchScreen.storyboard in Resources */,
-				FBE1A2FE1E08C3CE0053A5A9 /* Assets.xcassets in Resources */,
-				FBE1A2FC1E08C3CE0053A5A9 /* Main.storyboard in Resources */,
+				FBE1A31B1E08C4DD0053A5A9 /* Info.plist in Resources */,
+				FBE1A3161E08C4DD0053A5A9 /* LaunchScreen.storyboard in Resources */,
+				FBE1A31A1E08C4DD0053A5A9 /* Assets.xcassets in Resources */,
+				FBE1A3171E08C4DD0053A5A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE1A2F91E08C3CE0053A5A9 /* ViewController.swift in Sources */,
-				FBE1A2F71E08C3CE0053A5A9 /* AppDelegate.swift in Sources */,
+				FBE1A3191E08C4DD0053A5A9 /* AppDelegate.swift in Sources */,
+				FBE1A3251E08C91E0053A5A9 /* ReaderContact.swift in Sources */,
+				FBE1A3211E08C64F0053A5A9 /* ContactPresenter.swift in Sources */,
+				FBE1A31D1E08C5190053A5A9 /* DataContact.swift in Sources */,
+				FBE1A3271E08C94C0053A5A9 /* ReaderContactInterface.swift in Sources */,
+				FBE1A31F1E08C5BA0053A5A9 /* MainContactTableViewController.swift in Sources */,
+				FB7674C01E08D89700189F51 /* ReadViewController.swift in Sources */,
+				FBE1A3231E08C67D0053A5A9 /* ContactPresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FBE1A2FA1E08C3CE0053A5A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBE1A2FB1E08C3CE0053A5A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FBE1A2FF1E08C3CE0053A5A9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBE1A3001E08C3CE0053A5A9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FBE1A3031E08C3CE0053A5A9 /* Debug */ = {
@@ -260,7 +332,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Read Contact/Info.plist";
+				DEVELOPMENT_TEAM = PG98TTFS9P;
+				INFOPLIST_FILE = "$(SRCROOT)/Read Contact/resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kosign.Read-Contact";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +346,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Read Contact/Info.plist";
+				DEVELOPMENT_TEAM = PG98TTFS9P;
+				INFOPLIST_FILE = "$(SRCROOT)/Read Contact/resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kosign.Read-Contact";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +375,7 @@
 				FBE1A3071E08C3CE0053A5A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
