@@ -38,8 +38,10 @@ class ContactPresenter: ReaderContactInterface {
                             con=DataContact(contactName: contact.givenName, contactNumber: "\(phonenumber.value.value(forKey: "digits")!)")
                             listContacts.append(con)
                         }
-                        self.readSuccess(contact: listContacts)
                     }
+                    
+                    //sent data back to presenter
+                    self.readSuccess(contact: listContacts)
                     
                     if contacts.count == 0 {
                         message = "No contacts were found matching the given phone number."

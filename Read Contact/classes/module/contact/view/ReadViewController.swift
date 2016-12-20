@@ -14,6 +14,8 @@ class ReadViewController: UIViewController {
     @IBOutlet weak var tableViewFooter: UITableView!
     var presenter:ContactPresenter?
     var contacts:[DataContact]=[]
+    var numberArray = NSMutableArray()
+    var selectedArray=NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,6 @@ class ReadViewController: UIViewController {
         self.presenter=ContactPresenter()
         self.presenter?.reader=self
         self.presenter?.requestAccess()
-        tableViewFooter.setEditing(true, animated: true)
     }
     
     func showMessage(message: String) {
@@ -48,13 +49,28 @@ extension ReadViewController:UITableViewDelegate, UITableViewDataSource {
         return UITableViewCellEditingStyle.delete
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableViewFooter.dequeueReusableCell(withIdentifier: "idtReqCell", for: indexPath)
-        cell.textLabel?.text=contacts[indexPath.row].contactName
-        cell.detailTextLabel?.text=contacts[indexPath.row].contactNumber
-        return cell
+        let cell=tableViewFooter.dequeueReusableCell(withIdentifier: "idtReqCell", for: indexPath) as? DeviceContactCell
+        cell?.givenName.text=contacts[indexPath.row].contactName
+        cell?.phoneNumber.text=contacts[indexPath.row].contactNumber
+        cell?.tickButton.addTarget(self, action: #selector(tickAction(_:)), for: .touchUpInside)
+        cell?.tickButton.tag=indexPath.row
+        if selectedArray.contains(numberArray.object(at: indexPath.row)) {
+            cell?.tickButton.setBackgroundImage(#imageLiteral(resourceName: "Select"), for: UIControlState())
+        }else{
+            cell?.tickButton.setBackgroundImage(#imageLiteral(resourceName: "Diselect"), for: UIControlState())
+        }
+        return cell!
     }
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+    
+    func tickAction(_ sender: UIButton){
+        let value = sender.tag;
+        if selectedArray.contains(numberArray.object(at: value)) {
+            selectedArray.remove(numberArray.object(at: value))
+        }else{
+            selectedArray.add(numberArray.object(at: value))
+        }
+        print("Selecetd Array \(selectedArray)")
+        tableViewFooter.reloadData()
     }
     
 }
@@ -70,8 +86,12 @@ extension ReadViewController:ContactPresenterInterface{
     }
     
     func responseContact(contact: [DataContact]) {
-        print("My contact: \(contact)")
+        print("My contact: \(contact.count)")
         self.contacts=contact
+        for index in 0...contact.count{
+            numberArray.add(index)
+        }
+        print("numberArr: \(numberArray)")
         DispatchQueue.main.async {
             self.tableViewFooter.reloadData()
         }

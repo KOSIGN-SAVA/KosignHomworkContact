@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UPd-IP-Seh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UPd-IP-Seh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rY-D8-irb" id="NFf-uU-Gfq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfw-RS-sd1">
-                                            <rect key="frame" x="15" y="-6" width="69" height="68"/>
+                                            <rect key="frame" x="15" y="-7" width="69" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.30079701781285184" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UGT-K4-a6l">
-                                            <rect key="frame" x="320.5" y="8" width="39.5" height="29"/>
+                                            <rect key="frame" x="320" y="7" width="40" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
                                             <nil key="textColor"/>
@@ -103,29 +104,56 @@
                                     <constraint firstAttribute="height" constant="489" id="ab2-MY-hRV"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idtReqCell" textLabel="w9a-js-McS" detailTextLabel="Z9D-mW-i5h" rowHeight="50" style="IBUITableViewCellStyleValue1" id="yi3-Dg-e8a">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idtReqCell" rowHeight="50" id="yi3-Dg-e8a" customClass="DeviceContactCell" customModule="Read_Contact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yi3-Dg-e8a" id="2cX-t1-4dY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Vansa JM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w9a-js-McS">
-                                                    <rect key="frame" x="15" y="12" width="88" height="26"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="22"/>
-                                                    <color key="textColor" red="1" green="0.22755538086648075" blue="0.057279315217465099" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0I-aP-6rj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="kRw-gw-mG8"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="Diselect"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vansa step over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9G-il-NNi">
+                                                    <rect key="frame" x="44" y="14" width="158" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="AcR-xL-9Oj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0969092209" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z9D-mW-i5h">
-                                                    <rect key="frame" x="248.5" y="14" width="111.5" height="23.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0969092209" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga9-dU-jgt">
+                                                    <rect key="frame" x="243" y="15" width="124" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="WbC-86-kBk"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ga9-dU-jgt" firstAttribute="top" secondItem="2cX-t1-4dY" secondAttribute="topMargin" constant="7" id="2DZ-EG-I87"/>
+                                                <constraint firstItem="Ga9-dU-jgt" firstAttribute="leading" secondItem="W9G-il-NNi" secondAttribute="trailing" constant="41" id="C6X-dB-EpK"/>
+                                                <constraint firstItem="S0I-aP-6rj" firstAttribute="leading" secondItem="2cX-t1-4dY" secondAttribute="leading" id="DGz-mx-bwm"/>
+                                                <constraint firstItem="W9G-il-NNi" firstAttribute="top" secondItem="2cX-t1-4dY" secondAttribute="topMargin" constant="6" id="NZR-oA-ZhC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W9G-il-NNi" secondAttribute="trailing" constant="165" id="cM9-Gp-dpz"/>
+                                                <constraint firstItem="Ga9-dU-jgt" firstAttribute="trailing" secondItem="2cX-t1-4dY" secondAttribute="trailingMargin" id="dQp-rJ-O4Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="S0I-aP-6rj" secondAttribute="trailing" constant="329" id="eXA-GB-TPa"/>
+                                                <constraint firstItem="S0I-aP-6rj" firstAttribute="top" secondItem="2cX-t1-4dY" secondAttribute="top" id="oHN-Ph-FTs"/>
+                                                <constraint firstItem="W9G-il-NNi" firstAttribute="leading" secondItem="2cX-t1-4dY" secondAttribute="leadingMargin" constant="36" id="uWT-SS-0Z7"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="givenName" destination="W9G-il-NNi" id="n3a-Fw-m0I"/>
+                                            <outlet property="phoneNumber" destination="Ga9-dU-jgt" id="gNL-G1-ctd"/>
+                                            <outlet property="tickButton" destination="S0I-aP-6rj" id="aJC-eG-JpT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -168,4 +196,7 @@
             <point key="canvasLocation" x="-290" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Diselect" width="160" height="160"/>
+    </resources>
 </document>
