@@ -12,6 +12,11 @@ class ReadViewController: UIViewController {
 
     @IBOutlet weak var collectionViewHeader: UICollectionView!
     @IBOutlet weak var tableViewFooter: UITableView!
+    
+    var search:UISearchController!
+    var item=[DataContact]()
+    var filterItem=[DataContact]()
+    
     var presenter:ContactPresenter?
     var contacts:[DataContact]=[]
     var contactsNameInCollectionView:[DataContact]=[]
@@ -34,6 +39,13 @@ class ReadViewController: UIViewController {
         collectionViewHeader.delegate=self
         collectionViewHeader.dataSource=self
         
+        //search configuration
+        search=UISearchController(searchResultsController: nil)
+        search.dimsBackgroundDuringPresentation=true
+        search.searchBar.sizeToFit()
+        search.searchResultsUpdater=self
+        tableViewFooter.tableHeaderView=search.searchBar
+        
         self.presenter=ContactPresenter()
         self.presenter?.reader=self
         self.startReadContact()
@@ -54,30 +66,34 @@ class ReadViewController: UIViewController {
     }
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
         //save to main list
-        for index in 0..<contactsNameInCollectionView.count{
-            for index2 in 0..<mySelectedContact.count{
-                
-            }
-        }
-        mySelectedContact.append(contentsOf: contactsNameInCollectionView)
+        mySelectedContact=contactsNameInCollectionView
         _=self.navigationController?.popViewController(animated: true)
     }
 }
 
-extension ReadViewController:UITableViewDelegate, UITableViewDataSource {
+extension ReadViewController:UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        if search.isActive{
+            return filterItem.count
+        }else{
+            return contacts.count
+        }
     }
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableViewFooter.dequeueReusableCell(withIdentifier: "idtReqCell", for: indexPath) as? DeviceContactCell
-        cell?.givenName.text=contacts[indexPath.row].contactName
-        cell?.phoneNumber.text=contacts[indexPath.row].contactNumber
+        if search.isActive{
+            cell?.givenName.text=filterItem[indexPath.row].contactName
+            cell?.phoneNumber.text=filterItem[indexPath.row].contactNumber
+        }else{
+            cell?.givenName.text=contacts[indexPath.row].contactName
+            cell?.phoneNumber.text=contacts[indexPath.row].contactNumber
+        }
         //cell?.tickButton.addTarget(self, action: #selector(tickAction(_:)), for: .touchUpInside)
         cell?.tickButton.tag=indexPath.row
         if selectedArray.contains(numberArray.object(at: indexPath.row)) {
@@ -85,11 +101,20 @@ extension ReadViewController:UITableViewDelegate, UITableViewDataSource {
         }else{
             cell?.tickButton.setBackgroundImage(#imageLiteral(resourceName: "Diselect"), for: UIControlState())
         }
+        
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tickAction2(tag: indexPath.row)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterItem.removeAll(keepingCapacity: false)
+        filterItem=contacts.filter({ item in
+            item.contactName.lowercased().contains(searchController.searchBar.text!.lowercased())
+        })
+        tableViewFooter.reloadData()
     }
     
     func tickAction(_ sender: UIButton){
@@ -159,9 +184,15 @@ extension ReadViewController:ContactPresenterInterface{
         self.contacts=contact
         for index in 0..<contact.count{
             numberArray.add(index)
+            if mySelectedContact.contains(where: { $0.contactNumber == contacts[index].contactNumber }) {
+                let data=DataContact(contactName: contacts[index].contactName, contactNumber: contacts[index].contactNumber)
+                selectedArray.add(numberArray.object(at: index))
+                contactsNameInCollectionView.append(data)
+            }
         }
         DispatchQueue.main.async {
             self.tableViewFooter.reloadData()
+            self.collectionViewHeader.reloadData()
         }
         processCircle.stopAnimating()
     }
