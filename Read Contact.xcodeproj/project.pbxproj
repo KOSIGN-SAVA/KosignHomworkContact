@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F7AAF6331E097E8800BF28DD /* DeviceContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AAF6321E097E8800BF28DD /* DeviceContactCell.swift */; };
+		FB3F2F5A1E0A1E6D00AC8FD0 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F2F591E0A1E6D00AC8FD0 /* MyCollectionViewCell.swift */; };
 		FB7674C01E08D89700189F51 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7674BF1E08D89700189F51 /* ReadViewController.swift */; };
 		FBE1A3161E08C4DD0053A5A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A30F1E08C4DD0053A5A9 /* LaunchScreen.storyboard */; };
 		FBE1A3171E08C4DD0053A5A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE1A3101E08C4DD0053A5A9 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		F7AAF6321E097E8800BF28DD /* DeviceContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceContactCell.swift; sourceTree = "<group>"; };
+		FB3F2F591E0A1E6D00AC8FD0 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB7674BF1E08D89700189F51 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		FBE1A2F31E08C3CE0053A5A9 /* Read Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Read Contact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE1A30F1E08C4DD0053A5A9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				FBE1A31E1E08C5BA0053A5A9 /* MainContactTableViewController.swift */,
 				FB7674BF1E08D89700189F51 /* ReadViewController.swift */,
 				F7AAF6321E097E8800BF28DD /* DeviceContactCell.swift */,
+				FB3F2F591E0A1E6D00AC8FD0 /* MyCollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				FBE1A3211E08C64F0053A5A9 /* ContactPresenter.swift in Sources */,
 				FBE1A31D1E08C5190053A5A9 /* DataContact.swift in Sources */,
 				FBE1A3271E08C94C0053A5A9 /* ReaderContactInterface.swift in Sources */,
+				FB3F2F5A1E0A1E6D00AC8FD0 /* MyCollectionViewCell.swift in Sources */,
 				FBE1A31F1E08C5BA0053A5A9 /* MainContactTableViewController.swift in Sources */,
 				FB7674C01E08D89700189F51 /* ReadViewController.swift in Sources */,
 				FBE1A3231E08C67D0053A5A9 /* ContactPresenterInterface.swift in Sources */,
