@@ -11,6 +11,10 @@ import UIKit
 class MainContactTableViewController: UITableViewController {
     
     var presenter:ContactPresenter?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,18 +23,17 @@ class MainContactTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return mySelectedContact.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "idtMainCell", for: indexPath)
+        cell.textLabel?.text=mySelectedContact[indexPath.row].contactName
+        cell.detailTextLabel?.text=mySelectedContact[indexPath.row].contactNumber
         return cell
     }
     

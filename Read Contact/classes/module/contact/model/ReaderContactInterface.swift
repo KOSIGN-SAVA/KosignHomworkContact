@@ -13,3 +13,5 @@ protocol ReaderContactInterface {
     func readSuccess(contact:[DataContact])
     func readError()
 }
+
+var mySelectedContact:[DataContact]=[]

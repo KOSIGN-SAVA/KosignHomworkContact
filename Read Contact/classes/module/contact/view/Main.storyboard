@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="bfw-RS-sd1" detailTextLabel="UGT-K4-a6l" rowHeight="55" style="IBUITableViewCellStyleValue1" id="0rY-D8-irb">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idtMainCell" textLabel="bfw-RS-sd1" detailTextLabel="UGT-K4-a6l" rowHeight="55" style="IBUITableViewCellStyleValue1" id="0rY-D8-irb">
                                 <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rY-D8-irb" id="NFf-uU-Gfq">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfw-RS-sd1">
-                                            <rect key="frame" x="15" y="-7" width="69" height="68"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ronaldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfw-RS-sd1">
+                                            <rect key="frame" x="15" y="17" width="96" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.30079701781285184" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UGT-K4-a6l">
-                                            <rect key="frame" x="320" y="7" width="40" height="29"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0969092209" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UGT-K4-a6l">
+                                            <rect key="frame" x="239" y="15" width="121" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

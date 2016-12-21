@@ -54,7 +54,13 @@ class ReadViewController: UIViewController {
     }
     @IBAction func doneAction(_ sender: UIBarButtonItem) {
         //save to main list
-        _=navigationController?.popViewController(animated: true)
+        for index in 0..<contactsNameInCollectionView.count{
+            for index2 in 0..<mySelectedContact.count{
+                
+            }
+        }
+        mySelectedContact.append(contentsOf: contactsNameInCollectionView)
+        _=self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -144,7 +150,7 @@ extension ReadViewController:ContactPresenterInterface{
     func startReadContact() {
         view.addSubview(processCircle)
         processCircle.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.presenter?.requestAccess()
         })
     }
