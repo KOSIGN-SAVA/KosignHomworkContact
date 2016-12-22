@@ -106,6 +106,7 @@ extension ReadViewController:UITableViewDelegate, UITableViewDataSource, UISearc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("table index: ]\(indexPath.row)")
         tickAction2(tag: indexPath.row)
     }
     
@@ -163,6 +164,14 @@ extension ReadViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         let cell=collectionViewHeader.dequeueReusableCell(withReuseIdentifier: "idtCollectionView", for: indexPath) as? MyCollectionViewCell
         cell?.labelCollection.text=contactsNameInCollectionView[indexPath.row].contactName
         return cell!
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //selectedArray.remove(numberArray.object(at: indexPath.row))
+        print("indexpath: \(indexPath.row)")
+        mySelectedContact.remove(at: numberArray.object(at: indexPath.row) as! Int)
+        contactsNameInCollectionView.remove(at: indexPath.row)
+        tableViewFooter.reloadData()
+        collectionViewHeader.reloadData()
     }
 }
 
