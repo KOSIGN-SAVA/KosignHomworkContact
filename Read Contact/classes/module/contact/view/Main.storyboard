@@ -23,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0rY-D8-irb" id="NFf-uU-Gfq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ronaldo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfw-RS-sd1">
-                                            <rect key="frame" x="15" y="17" width="96" height="23"/>
+                                            <rect key="frame" x="15" y="17" width="95.5" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.30079701781285184" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="0969092209" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UGT-K4-a6l">
-                                            <rect key="frame" x="239" y="15" width="121" height="24"/>
+                                            <rect key="frame" x="239.5" y="15" width="120.5" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -76,7 +76,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Hj-Fr-G3q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="123" id="Ja2-fI-t7T"/>
                                 </constraints>
@@ -112,14 +112,14 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-AI-jAL">
-                                <rect key="frame" x="0.0" y="131" width="375" height="536"/>
+                                <rect key="frame" x="0.0" y="123" width="375" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idtReqCell" rowHeight="50" id="yi3-Dg-e8a" customClass="DeviceContactCell" customModule="Read_Contact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yi3-Dg-e8a" id="2cX-t1-4dY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-Ff-mXI">
@@ -172,7 +172,7 @@
                         <constraints>
                             <constraint firstItem="jaf-AI-jAL" firstAttribute="leading" secondItem="ECY-Hp-cCz" secondAttribute="leading" id="Ox1-pW-FS2"/>
                             <constraint firstAttribute="trailing" secondItem="jaf-AI-jAL" secondAttribute="trailing" id="RBW-o4-2xJ"/>
-                            <constraint firstItem="jaf-AI-jAL" firstAttribute="top" secondItem="8Hj-Fr-G3q" secondAttribute="bottom" constant="8" id="SQ8-LW-ONV"/>
+                            <constraint firstItem="jaf-AI-jAL" firstAttribute="top" secondItem="8Hj-Fr-G3q" secondAttribute="bottom" id="SQ8-LW-ONV"/>
                             <constraint firstItem="8Hj-Fr-G3q" firstAttribute="top" secondItem="ECY-Hp-cCz" secondAttribute="top" id="VbP-55-rL7"/>
                             <constraint firstItem="V14-0O-8k4" firstAttribute="top" secondItem="jaf-AI-jAL" secondAttribute="bottom" id="X3Y-N9-NZ6"/>
                             <constraint firstItem="8Hj-Fr-G3q" firstAttribute="leading" secondItem="ECY-Hp-cCz" secondAttribute="leading" id="dH3-a6-LQa"/>
