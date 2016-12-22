@@ -166,9 +166,7 @@ extension ReadViewController:UICollectionViewDelegate, UICollectionViewDataSourc
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //selectedArray.remove(numberArray.object(at: indexPath.row))
-        print("indexpath: \(indexPath.row)")
-        mySelectedContact.remove(at: numberArray.object(at: indexPath.row) as! Int)
+        selectedArray.remove(numberArray.object(at: contacts.index(where: {$0.contactNumber == contactsNameInCollectionView[indexPath.row].contactNumber})!))
         contactsNameInCollectionView.remove(at: indexPath.row)
         tableViewFooter.reloadData()
         collectionViewHeader.reloadData()

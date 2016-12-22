@@ -13,3 +13,5 @@ class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelCollection: UILabel!
     
 }
+
+// customed by VANSA JM
