@@ -11,4 +11,5 @@ import Foundation
 struct DataContact {
     var contactName:String!
     var contactNumber:String!
+    var isCheck : Bool = false
 }

@@ -34,7 +34,7 @@ class ContactPresenter: ReaderContactInterface {
                         var con:DataContact!
                         
                         for phonenumber: CNLabeledValue in contact.phoneNumbers {
-                            con=DataContact(contactName: contact.givenName, contactNumber: "\(phonenumber.value.value(forKey: "digits")!)")
+                            con=DataContact(contactName: contact.givenName, contactNumber: "\(phonenumber.value.value(forKey: "digits")!)", isCheck: false)
                             listContacts.append(con)
                         }
                     }
