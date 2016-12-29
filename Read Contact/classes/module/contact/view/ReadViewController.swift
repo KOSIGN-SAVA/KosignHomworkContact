@@ -132,19 +132,23 @@ extension ReadViewController:UITableViewDelegate, UITableViewDataSource {
     
     func tickAction2(tag:Int, indexSearch:Int){
         let data = DataContact(contactName: contacts[tag].contactName, contactNumber: contacts[tag].contactNumber, isCheck: true)
-        if contacts[tag].isCheck {
-            contacts[tag].isCheck=false
-            contactsNameInCollectionView.remove(at: contactsNameInCollectionView.index(where: {$0.contactName==contacts[tag].contactName && $0.contactNumber==contacts[tag].contactNumber})!)
-        }else{
-            contacts[tag].isCheck=true
-            contactsNameInCollectionView.append(data)
-        }
         
         if filterItem.count>0{
             if filterItem[indexSearch].isCheck{
                 filterItem[indexSearch].isCheck=false
+                contactsNameInCollectionView.remove(at: contactsNameInCollectionView.index(where: {$0.contactName==contacts[indexSearch].contactName && $0.contactNumber==contacts[indexSearch].contactNumber})!)
+
             }else{
                 filterItem[indexSearch].isCheck=true
+                contactsNameInCollectionView.append(data)
+            }
+        }else{
+            if contacts[tag].isCheck {
+                contacts[tag].isCheck=false
+                contactsNameInCollectionView.remove(at: contactsNameInCollectionView.index(where: {$0.contactName==contacts[tag].contactName && $0.contactNumber==contacts[tag].contactNumber})!)
+            }else{
+                contacts[tag].isCheck=true
+                contactsNameInCollectionView.append(data)
             }
         }
         
@@ -171,7 +175,11 @@ extension ReadViewController:UICollectionViewDelegate, UICollectionViewDataSourc
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //selectedArray.remove(numberArray.object(at: contacts.index(where: {$0.contactNumber == contactsNameInCollectionView[indexPath.row].contactNumber})!))
-        contacts[contacts.index(where: {$0.contactNumber == contactsNameInCollectionView[indexPath.row].contactNumber})!].isCheck=false
+        if filterItem.count>0{
+            filterItem[filterItem.index(where: {$0.contactNumber == contactsNameInCollectionView[indexPath.row].contactNumber})!].isCheck=false
+        }else{
+            contacts[contacts.index(where: {$0.contactNumber == contactsNameInCollectionView[indexPath.row].contactNumber})!].isCheck=false
+        }
         contactsNameInCollectionView.remove(at: indexPath.row)
         tableViewFooter.reloadData()
         collectionViewHeader.reloadData()

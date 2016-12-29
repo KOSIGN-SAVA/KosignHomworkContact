@@ -185,7 +185,7 @@
 				TargetAttributes = {
 					FBE1A2F21E08C3CE0053A5A9 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = PG98TTFS9P;
+						DevelopmentTeam = NSWJNWC9FS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -341,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PG98TTFS9P;
+				DEVELOPMENT_TEAM = NSWJNWC9FS;
 				INFOPLIST_FILE = "$(SRCROOT)/Read Contact/resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -356,7 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = PG98TTFS9P;
+				DEVELOPMENT_TEAM = NSWJNWC9FS;
 				INFOPLIST_FILE = "$(SRCROOT)/Read Contact/resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
